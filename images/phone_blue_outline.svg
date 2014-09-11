@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   version="1.1"
+   width="150"
+   height="150"
+   viewBox="0 0 150 150"
+   id="Layer_1"
+   xml:space="preserve"><metadata
+   id="metadata5836"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+   id="defs5834"><linearGradient
+     x1="0"
+     y1="74.743637"
+     x2="150.00764"
+     y2="74.743637"
+     id="linearGradient4037"
+     xlink:href="#linearGradient4033"
+     gradientUnits="userSpaceOnUse" /><linearGradient
+     id="linearGradient4033"><stop
+       id="stop4035"
+       style="stop-color:#01528e;stop-opacity:1"
+       offset="0" /></linearGradient><linearGradient
+     x1="0"
+     y1="74.743637"
+     x2="150.00764"
+     y2="74.743637"
+     id="linearGradient4655"
+     xlink:href="#linearGradient4033"
+     gradientUnits="userSpaceOnUse"
+     gradientTransform="translate(0.25041967,0.40890401)" /></defs>
+<path
+   d="m 150.25806,75.152541 a 75.003822,74.751289 0 1 1 -150.00764033,0 75.003822,74.751289 0 1 1 150.00764033,0 z"
+   id="path3263"
+   style="fill:url(#linearGradient4655);fill-opacity:1;fill-rule:evenodd;stroke:none" /><g
+   transform="translate(27.254238,25.525424)"
+   id="g5826"
+   style="fill:none;stroke:#ffffff;stroke-width:1.5;stroke-miterlimit:4;stroke-dasharray:none">
+	<path
+   d="M 92.118,72.734 71.145,55.282 c -0.72,-0.601 -1.662,-0.852 -2.587,-0.69 -3.274,0.578 -6.27,2.111 -8.666,4.44 l -1.166,1.138 c -1.139,1.105 -2.113,2.354 -2.896,3.713 l -0.75,1.302 -1.224,-0.874 C 45.364,58.248 37.752,50.636 31.689,42.144 l -0.874,-1.224 1.302,-0.752 c 1.357,-0.781 2.604,-1.754 3.709,-2.894 l 1.146,-1.173 c 2.325,-2.395 3.86,-5.389 4.436,-8.662 0.162,-0.924 -0.089,-1.867 -0.689,-2.587 L 23.265,3.884 C 23.202,3.806 23.134,3.733 23.066,3.663 22.5,3.098 21.744,2.768 20.938,2.739 17.308,2.604 9.814,5.659 5.757,11.534 3.222,15.206 0.982,21.434 4.706,30.26 l 0.051,0.11 c 6.369,13.621 14.505,25.398 24.868,36.004 l 0.039,0.039 c 10.58,10.341 22.34,18.459 35.966,24.83 l 0.107,0.048 c 8.825,3.727 15.056,1.485 18.729,-1.049 5.875,-4.058 8.931,-11.551 8.796,-15.182 -0.033,-0.901 -0.442,-1.748 -1.144,-2.326 z"
+   id="path5828"
+   style="fill:none;stroke:#ffffff;stroke-width:1.5;stroke-miterlimit:4;stroke-dasharray:none" />
+	<polygon
+   points="59.973,35.077 59.973,44.19 69.387,44.19 69.387,35.077 78.504,35.077 78.504,25.661 69.387,25.661 69.387,16.546 59.973,16.546 59.973,25.661 50.855,25.661 50.855,35.077 "
+   id="polygon5830"
+   style="fill:none;stroke:#ffffff;stroke-width:1.5;stroke-miterlimit:4;stroke-dasharray:none" />
+</g>
+</svg>

@@ -29,7 +29,7 @@
               });
 			  
 			  $("#stream").live("click", function(){
-				SC.stream(https://soundcloud.com/omegadubstep/the-beatles-come-together-omega-remix, {autoPlay: true});
+				SC.stream("/tracks/293", {autoPlay: true});
 			  });
             </script>
 			
@@ -402,7 +402,7 @@ $(document).ready(function(){
         <div class="col-md-4">
 			<div id="soundcloudWidget"></div>
 			<script type="text/JavaScript">
-			  SC.oEmbed("https://soundcloud.com/anmlcollective", {color: "FF5500"},  document.getElementById("soundcloudWidget"));
+			  SC.oEmbed("https://soundcloud.com/search?q=Beatles%20remix", {color: "FF5500"},  document.getElementById("soundcloudWidget"));
 			</script>
         </div>
       </div>

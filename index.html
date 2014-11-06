@@ -29,7 +29,7 @@
               });
 			  
 			  $("#stream").live("click", function(){
-				SC.stream("/tracks/293", {autoPlay: true});
+				SC.stream("https://soundcloud.com/deadoceans/the-tallest-man-on-earth-1904", {autoPlay: true});
 			  });
             </script>
 			
@@ -382,11 +382,12 @@ $(document).ready(function(){
         <div class="col-md-4">
             <input type="button" id="loadTracks" value="Get trending track" />
             <div id="track"></div>
+			&nbsp; <br />
 			<input type="button" id="stream" value="Stream Music" />
         </div>
         <div class="col-md-8">
           <h2 class="featurette-heading">SoundCloud SDK <span class="text-muted">Retrieving an audio file</span></h2>
-          <p class="lead">For this part of my exploration I've decided to look at the SoundCloud SDK and integrating SoundCloud into my site to retrieve a file. <a href="https://developers.soundcloud.com/docs/api/sdks#javascript" target="_blank">https://developers.soundcloud.com/docs/api/sdks#javascript</a>. I explored examples like this one <a href="http://connect.soundcloud.com/examples/basic.html" target="_blank">http://connect.soundcloud.com/examples/basic.html</a>.</p>
+          <p class="lead">For this part of my exploration I've decided to look at the SoundCloud SDK and integrating SoundCloud into my site to retrieve a file. <a href="https://developers.soundcloud.com/docs/api/sdks#javascript" target="_blank">https://developers.soundcloud.com/docs/api/sdks#javascript</a>. I explored examples like this one <a href="http://connect.soundcloud.com/examples/basic.html" target="_blank">http://connect.soundcloud.com/examples/basic.html</a>. I've also added a streaming button that only pulls a song, not the visuals. An interesting thing about this functionality, is that it will continue to load the song every time the button is pushed. So if the button is pushed 15 times, the song will play over itself 15 times.</p>
         </div>
       </div>
 	  

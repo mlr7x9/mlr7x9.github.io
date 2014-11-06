@@ -13,20 +13,23 @@
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
-  <script src="js/soundcloud.js"></script>
-  <script src="//connect.soundcloud.com/sdk.js"></script>
-  <script>
-    SC.initialize({
-      client_id: "a9a2310a74778d0ad006e8c1d5fb0257"
-    });
+              <script src="//connect.soundcloud.com/sdk.js"></script>
+            <script>
+              SC.initialize({
+                client_id: "a9a2310a74778d0ad006e8c1d5fb0257"
+              });
 
-    $("#loadTracks").live("click", function(){
-      SC.get("/tracks", {limit: 1}, function(tracks){
-        var track = tracks[0];
-        SC.oEmbed(track.uri, document.getElementById("track"));
-      });
-    });
-  </script>
+              $("#loadTracks").live("click", function(){
+                SC.get("/tracks", {limit: 1}, function(tracks){
+                  var track = tracks[0];
+                  SC.oEmbed(track.uri, document.getElementById("track"));
+                });
+              });
+			    $("#stream").live("click", function(){
+    SC.stream("/tracks/293", {autoPlay: true});
+  });
+            </script>
+
 
     <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
 
@@ -375,12 +378,25 @@ $(document).ready(function(){
 
       <div class="row featurette">
         <div class="col-md-4">
-          <input type="button" id="loadTracks" class="button big" value="Get hottest track" />
-<div id="track"></div>
+            <input type="button" id="loadTracks" value="Get hottest track" />
+            <div id="track"></div>
         </div>
         <div class="col-md-8">
-          <h2 class="featurette-heading">SoundCloud SDK <span class="text-muted">Bringing in some audio</span></h2>
-          <p class="lead">For this part of my exploration I've decided to look at the SoundCloud SDK and integrating SoundCloud into my site. <a href="https://developers.soundcloud.com/docs/api/sdks#javascript" target="_blank">https://developers.soundcloud.com/docs/api/sdks#javascript</a>. I explored examples like this one <a href="http://connect.soundcloud.com/examples/basic.html" target="_blank">http://connect.soundcloud.com/examples/basic.html</a>.</p>
+          <h2 class="featurette-heading">SoundCloud SDK <span class="text-muted">Retrieving an audio file</span></h2>
+          <p class="lead">For this part of my exploration I've decided to look at the SoundCloud SDK and integrating SoundCloud into my site to retrieve a file. <a href="https://developers.soundcloud.com/docs/api/sdks#javascript" target="_blank">https://developers.soundcloud.com/docs/api/sdks#javascript</a>. I explored examples like this one <a href="http://connect.soundcloud.com/examples/basic.html" target="_blank">http://connect.soundcloud.com/examples/basic.html</a>.</p>
+        </div>
+      </div>
+	  
+	        <hr class="featurette-divider">
+
+      <div class="row featurette">
+
+        <div class="col-md-8">
+          <h2 class="featurette-heading">SoundCloud Streaming <span class="text-muted">Streaming some audio</span></h2>
+          <p class="lead">Then I took it a step further and integrated streaming into my site <a href="http://connect.soundcloud.com/examples/streaming.html" target="_blank">http://connect.soundcloud.com/examples/streaming.html</a>.</p>
+        </div>
+        <div class="col-md-4">
+            <input type="button" href="#" id="stream" class="big button" value="Stream It Again, Sam" />
         </div>
       </div>
 
@@ -390,7 +406,7 @@ $(document).ready(function(){
       <!-- FOOTER -->
       <footer>
         <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>2014 Michael Rackers Exploration 1</p>
+        <p>2014 Michael Rackers Exploration</p>
       </footer>
 
     </div><!-- /.container -->

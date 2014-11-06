@@ -13,6 +13,19 @@
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
+  <script src="js/soundcloud.js"></script>
+  <script src="//connect.soundcloud.com/sdk.js"></script>
+<script>
+  SC.initialize({
+    client_id: "YOUR_CLIENT_ID"
+  });
+  $("#loadTracks").live("click", function(){
+    SC.get("/tracks", {limit: 1}, function(tracks){
+      var track = tracks[0];
+      SC.oEmbed(track.uri, document.getElementById("track"));
+    });
+  });
+</script>
 
     <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
 
@@ -358,6 +371,17 @@ $(document).ready(function(){
       </div>
 
       <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-4">
+          <input type="button" id="loadTracks" class="button big" value="Get hottest track" />
+<div id="track"></div>
+        </div>
+        <div class="col-md-8">
+          <h2 class="featurette-heading">SoundCloud SDK <span class="text-muted">Bringing in some audio</span></h2>
+          <p class="lead">For this part of my exploration I've decided to look at the SoundCloud SDK and integrating SoundCloud into my site. <a href="https://developers.soundcloud.com/docs/api/sdks#javascript" target="_blank">https://developers.soundcloud.com/docs/api/sdks#javascript</a>. I explored examples like this one <a href="http://connect.soundcloud.com/examples/basic.html" target="_blank">http://connect.soundcloud.com/examples/basic.html</a>.</p>
+        </div>
+      </div>
 
       <!-- /END THE FEATURETTES -->
 

@@ -15,17 +15,18 @@
 	<link href="css/style.css" rel="stylesheet">
   <script src="js/soundcloud.js"></script>
   <script src="//connect.soundcloud.com/sdk.js"></script>
-<script>
-  SC.initialize({
-    client_id: "YOUR_CLIENT_ID"
-  });
-  $("#loadTracks").live("click", function(){
-    SC.get("/tracks", {limit: 1}, function(tracks){
-      var track = tracks[0];
-      SC.oEmbed(track.uri, document.getElementById("track"));
+  <script>
+    SC.initialize({
+      client_id: "a9a2310a74778d0ad006e8c1d5fb0257"
     });
-  });
-</script>
+
+    $("#loadTracks").live("click", function(){
+      SC.get("/tracks", {limit: 1}, function(tracks){
+        var track = tracks[0];
+        SC.oEmbed(track.uri, document.getElementById("track"));
+      });
+    });
+  </script>
 
     <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
 

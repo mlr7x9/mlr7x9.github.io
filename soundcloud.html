@@ -73,43 +73,40 @@
       </div>
     </div>
 
-      <!-- START THE FEATURETTES -->
-    <div class="container marketing">
-      <hr class="featurette-divider">
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
 
-      <div class="row featurette">
-        <div class="col-md-8">
-          <h2 class="featurette-heading">Canvas <span class="text-muted">The first look.</span></h2>
-          <p class="lead">One of the components I've decided to explore in this exploration is the html element canvas. 
-		  The reference I used for this can be found at <a href="http://diveintohtml5.info/canvas.html" target="_blank">http://diveintohtml5.info/canvas.html</a>.
-		  Canvas allows you to section of a portion of a webpage to use javascript inside. This is often used for graphics and games.
-		  </p>
-        </div>
+		        <hr class="featurette-divider">
+      
+	  <div class="row featurette">
         <div class="col-md-4">
-          <canvas id="a" width="300" height="225"></canvas>
-		  <script>
-		  function draw_b() {
-  var b_canvas = document.getElementById("a");
-  var b_context = b_canvas.getContext("2d");
-  b_context.fillRect(50, 25, 150, 100);
-}
-		  </script>
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-4">
-          <img class="img-responsive img-thumbnail" src="images/responsive_images.png" alt="Mountain Image">
+            <input type="button" id="loadTracks" value="Get trending track" />
+            <div id="track"></div>
+			&nbsp; <br />
+			<input type="button" id="stream" value="Stream Music" />
         </div>
         <div class="col-md-8">
-          <h2 class="featurette-heading">Responsive images <span class="text-muted">The second component.</span></h2>
-          <p class="lead">I've also decided to explore responsive images. This will scale the image to fit the parent element. I've also included image shapes. <a href="http://getbootstrap.com/css/#images" target="_blank">http://getbootstrap.com/css/#images</a>. </p>
+          <h2 class="featurette-heading">SoundCloud SDK <span class="text-muted">Retrieving an audio file</span></h2>
+          <p class="lead">For this part of my exploration I've decided to look at the SoundCloud SDK (<a href="https://developers.soundcloud.com/docs/api/sdks#javascript" target="_blank">https://developers.soundcloud.com/docs/api/sdks#javascript</a>) and integrating SoundCloud into my site to listen to music. I explored examples like this one <a href="http://connect.soundcloud.com/examples/basic.html" target="_blank">http://connect.soundcloud.com/examples/basic.html</a>. I've also added a streaming button that only pulls a song, not the visuals. An interesting thing about this functionality, is that it will continue to load the song every time the button is pushed. So if the button is pushed 15 times, the song will play over itself 15 times.</p>
         </div>
       </div>
+	  
+	        <hr class="featurette-divider">
 
-      <hr class="featurette-divider">
+      <div class="row featurette">
+
+        <div class="col-md-8">
+          <h2 class="featurette-heading">SoundCloud Widget <span class="text-muted">Streaming some audio via a widget</span></h2>
+          <p class="lead">Then I took it a step further and integrated streaming of a specified playlist or song into my site <a href="http://connect.soundcloud.com/examples/streaming.html" target="_blank">http://connect.soundcloud.com/examples/streaming.html</a>. The information about the widget can be found here <a href="https://developers.soundcloud.com/docs/api/sdks#javascript" target="_blank">https://developers.soundcloud.com/docs/api/sdks#javascript</a>.</p>
+        </div>
+        <div class="col-md-4">
+			<div id="soundcloudWidget"></div>
+			<script type="text/JavaScript">
+			  SC.oEmbed("https://soundcloud.com/michael-rackers/sets/exploration", {color: "FF5500"},  document.getElementById("soundcloudWidget"));
+			</script>
+        </div>
+      </div>
 
       <!-- /END THE FEATURETTES -->
 
@@ -117,7 +114,7 @@
       <!-- FOOTER -->
       <footer>
         <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>2014 Michael Rackers Exploration 1</p>
+        <p>2014 Michael Rackers Exploration</p>
       </footer>
 
     </div><!-- /.container -->
@@ -127,9 +124,6 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <script src="../../assets/js/docs.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="js/bootstrap.min.js"></script>
   </body>
 </html>

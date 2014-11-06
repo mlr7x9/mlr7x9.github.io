@@ -13,11 +13,19 @@
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
+  <script src="js/soundcloud.js"></script>
               <script src="//connect.soundcloud.com/sdk.js"></script>
             <script>
               SC.initialize({
-                client_id: "a9a2310a74778d0ad006e8c1d5fb0257"
+                client_id: "a9a2310a74778d0ad006e8c1d5fb0257",
               });
+			  
+			  // initiate auth popup
+SC.connect(function() {
+  SC.get('/me', function(me) { 
+    alert('Hello, ' + me.username); 
+  });
+});
 
               $("#loadTracks").live("click", function(){
                 SC.get("/tracks", {limit: 1}, function(tracks){
@@ -397,6 +405,10 @@ $(document).ready(function(){
         </div>
         <div class="col-md-4">
             <input type="button" href="#" id="stream" class="big button" value="Stream It Again, Sam" />
+			<div id="putTheWidgetHere"></div>
+<script type="text/JavaScript">
+  SC.oEmbed("http://soundcloud.com/forss/sets/soulhack", {color: "ff0066"},  document.getElementById("putTheWidgetHere"));
+</script>
         </div>
       </div>
 

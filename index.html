@@ -457,7 +457,7 @@ canvas {
 <div id="wait">Generating maze; please wait…</div>
 <canvas width="960" height="500"></canvas>
 <script src="http://d3js.org/d3.v3.min.js"></script>
-<script src="cubehelix.min.js"></script>
+<script src="/cubehelix.min.js"></script>
 <script>
 
 var canvas = d3.select("canvas"),
@@ -479,7 +479,7 @@ var colors = d3.range(360)
       };
     })());
 
-var worker = new Worker("generate-prims.js");
+var worker = new Worker("/generate-prims.js");
 worker.postMessage({width: width, height: height});
 worker.addEventListener("message", function(event) {
   worker.terminate();

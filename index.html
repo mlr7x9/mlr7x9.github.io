@@ -544,14 +544,84 @@ worker.addEventListener("message", function(event) {
 
       <div class="row featurette">
 
-        <div class="col-md-8">
-          <h2 class="featurette-heading"> <span class="text-muted"></span></h2>
-          <p class="lead"></p>
+               <div class="col-md-8">
+          <h2 class="featurette-heading">Another D3 Example <span class="text-muted">A look at an interactive Data-Driven Document</span></h2>
+          <p class="lead">This is a look at Rounded Rectangles <a href="http://bl.ocks.org/mbostock/1123639" target="_blank">http://bl.ocks.org/mbostock/1123639</a>. The SVG rectangles spin and follow the mouse as you move it across the area.</p>
         </div>
-        <div class="col-md-4">
-			
+        <div class="col-md-4 canvasC">
+		<style>
+		.canvasB {
+			position: relative;
+		}
+		</style>
+		
+			<script>
+
+var mouse = [480, 250],
+    count = 0;
+
+var svg = d3.select(".canvasC").append("svg")
+    .attr("width", 960)
+    .attr("height", 500);
+
+var g = svg.selectAll("g")
+    .data(d3.range(25))
+  .enter().append("g")
+    .attr("transform", "translate(" + mouse + ")");
+
+g.append("rect")
+    .attr("rx", 6)
+    .attr("ry", 6)
+    .attr("x", -12.5)
+    .attr("y", -12.5)
+    .attr("width", 25)
+    .attr("height", 25)
+    .attr("transform", function(d, i) { return "scale(" + (1 - d / 25) * 20 + ")"; })
+    .style("fill", d3.scale.category20c());
+
+g.datum(function(d) {
+  return {center: [0, 0], angle: 0};
+});
+
+svg.on("mousemove", function() {
+  mouse = d3.mouse(this);
+});
+
+d3.timer(function() {
+  count++;
+  g.attr("transform", function(d, i) {
+    d.center[0] += (mouse[0] - d.center[0]) / (i + 5);
+    d.center[1] += (mouse[1] - d.center[1]) / (i + 5);
+    d.angle += Math.sin((count + i) / 10) * 7;
+    return "translate(" + d.center + ")rotate(" + d.angle + ")";
+  });
+});
+
+</script>
         </div>
       </div>
+
+
+      <!-- /END THE FEATURETTES -->
+
+
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>2014 Michael Rackers Exploration 1</p>
+      </footer>
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/docs.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
 	  
 
       <!-- /END THE FEATURETTES -->

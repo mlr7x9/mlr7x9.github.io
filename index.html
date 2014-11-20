@@ -90,6 +90,7 @@
                 <li class="active"><a href="/index.html">Home</a></li>
                 <li><a href="/canvas.html">Canvas</a></li>
                 <li><a href="/soundcloud.html">SoundCloud</a></li>
+				<li><a href="/d3.html">Data-Driven Documents</a></li>
               </ul>
             </div>
           </div>
@@ -454,7 +455,7 @@ $(document).ready(function(){
 <div id="wait">Generating maze; please wait…</div>
 <canvas class="canvasB" width="200" height="200"></canvas>
 <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-<script src="/cubehelix.min.js"></script>
+<script src="/js/cubehelix.min.js"></script>
 <script>
 
 var canvasB = d3.select(".canvasB"),
@@ -476,7 +477,7 @@ var colors = d3.range(360)
       };
     })());
 
-var worker = new Worker("/generate-prims.js");
+var worker = new Worker("/js/generate-prims.js");
 worker.postMessage({width: width, height: height});
 worker.addEventListener("message", function(event) {
   worker.terminate();

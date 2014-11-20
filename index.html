@@ -456,14 +456,14 @@ canvas {
 </style>
 <div id="wait">Generating maze; please wait…</div>
 <canvas width="960" height="500"></canvas>
-<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 <script src="/cubehelix.min.js"></script>
 <script>
 
-var canvas = d3.select("canvas"),
-    context = canvas.node().getContext("2d"),
-    width = canvas.property("width"),
-    height = canvas.property("height");
+var canvasB = d3.select("canvas"),
+    context = canvasB.node().getContext("2d"),
+    width = canvasB.property("width"),
+    height = canvasB.property("height");
 
 var colors = d3.range(360)
     .map((function() {

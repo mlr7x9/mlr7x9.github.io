@@ -449,18 +449,18 @@ $(document).ready(function(){
   position: absolute;
 }
 
-canvas {
+.canvasB {
   position: relative;
 }
 
 </style>
 <div id="wait">Generating maze; please wait…</div>
-<canvas width="960" height="500"></canvas>
+<canvas class="canvasB" width="960" height="500"></canvas>
 <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 <script src="/cubehelix.min.js"></script>
 <script>
 
-var canvasB = d3.select("canvas"),
+var canvasB = d3.select("canvasB"),
     context = canvasB.node().getContext("2d"),
     width = canvasB.property("width"),
     height = canvasB.property("height");

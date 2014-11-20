@@ -190,19 +190,19 @@ worker.addEventListener("message", function(event) {
           <h2 class="featurette-heading">Another D3 Example <span class="text-muted">A look at an interactive Data-Driven Document</span></h2>
           <p class="lead">This is a look at Rounded Rectangles <a href="http://bl.ocks.org/mbostock/1123639" target="_blank">http://bl.ocks.org/mbostock/1123639</a>. The SVG rectangles spin and follow the mouse as you move it across the area.</p>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 canvasC">
 		<style>
 		.canvasB {
 			position: relative;
 		}
 		</style>
-		<canvas class="canvasC" width="350" height="350"></canvas>
+		
 			<script>
 
 var mouse = [480, 250],
     count = 0;
 
-var svg = d3.select("div").append("svg")
+var svg = d3.select(".canvasC").append("svg")
     .attr("width", 960)
     .attr("height", 500);
 

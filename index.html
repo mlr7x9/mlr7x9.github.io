@@ -643,7 +643,7 @@ if ($search_results === NULL) die('Error parsing json');
 $movies = $search_results->movies;
 echo '<ul>';
 foreach ($movies as $movie) {
-  echo '<li><a href="' . $movie->links->alternate . '">' . $movie->title . " (" . $movie->year . ")</a></li>";
+  echo '<li><a href="' . $movie->links->alternate . '">' . $movie->title . '" ("' . $movie->year . '")</a></li>"';
 }
 echo '</ul>';
 

@@ -612,6 +612,66 @@ d3.timer(function() {
         </div>
       </div>
 	  
+	        <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-4">
+            <?php
+$apikey = '2dhr4mkrkaehp8qm3wbvp7vb';
+$q = urlencode('Toy Story'); // make sure to url encode an query parameters
+
+// construct the query with our apikey and the query we want to make
+$endpoint = 'http://api.rottentomatoes.com/api/public/v1.0/movies.json?apikey=' . $apikey . '&q=' . $q;
+
+// setup curl to make a call to the endpoint
+$session = curl_init($endpoint);
+
+// indicates that we want the response back
+curl_setopt($session, CURLOPT_RETURNTRANSFER, true);
+
+// exec curl and get the data back
+$data = curl_exec($session);
+
+// remember to close the curl session once we are finished retrieving the data
+curl_close($session);
+
+// decode the json data to make it easier to parse the php
+$search_results = json_decode($data);
+if ($search_results === NULL) die('Error parsing json');
+
+// play with the data!
+$movies = $search_results->movies;
+echo '<ul>';
+foreach ($movies as $movie) {
+  echo '<li><a href="' . $movie->links->alternate . '">' . $movie->title . " (" . $movie->year . ")</a></li>";
+}
+echo '</ul>';
+
+
+?>
+        </div>
+        <div class="col-md-8">
+          <h2 class="featurette-heading">Rotten Tomatoes API <span class="text-muted">Searching for a movie</span></h2>
+          <p class="lead">This exploration involves APIs, or more specifically, the Rotten Tomatoes API. Documentation can be found at (<a href="http://developer.rottentomatoes.com/docs" target="_blank">http://developer.rottentomatoes.com/docs</a>. and integrating SoundCloud into my site to listen to music. I explored examples like this one <a href="http://connect.soundcloud.com/examples/basic.html" target="_blank">http://connect.soundcloud.com/examples/basic.html</a>.</p>
+        </div>
+      </div>
+	  
+	        <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-8">
+          <h2 class="featurette-heading">SoundCloud SDK <span class="text-muted">Retrieving an audio file</span></h2>
+          <p class="lead">For this part of my exploration I've decided to look at the SoundCloud SDK (<a href="https://developers.soundcloud.com/docs/api/sdks#javascript" target="_blank">https://developers.soundcloud.com/docs/api/sdks#javascript</a>) and integrating SoundCloud into my site to listen to music. I explored examples like this one <a href="http://connect.soundcloud.com/examples/basic.html" target="_blank">http://connect.soundcloud.com/examples/basic.html</a>. I've also added a streaming button that only pulls a song, not the visuals. An interesting thing about this functionality, is that it will continue to load the song every time the button is pushed. So if the button is pushed 15 times, the song will play over itself 15 times.</p>
+        </div>
+		<div class="col-md-4">
+            <input type="button" id="loadTracks" value="Get trending track" />
+            <div id="track"></div>
+			&nbsp; <br />
+			<input type="button" id="stream" value="Stream Music" />
+        </div>
+        
+      </div>
+	  
 
       <!-- /END THE FEATURETTES -->
 &nbsp; <br />

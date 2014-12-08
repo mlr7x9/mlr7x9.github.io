@@ -44,42 +44,35 @@
 			  });
             </script>
 			
-			    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-    <style>
-      html, body, #map-canvas {
-        height: 100%;
-        margin: 0px;
-        padding: 0px
-      }
-    </style>
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+			<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+			<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
 			
 			<meta charset="utf-8">
-<style>
+			<style>
 
-.background {
-  fill: none;
-  pointer-events: all;
-}
+			.background {
+			  fill: none;
+			  pointer-events: all;
+			}
 
-#states {
-  fill: #aaa;
-}
+			#states {
+			  fill: #aaa;
+			}
 
-#states .active {
-  fill: orange;
-}
+			#states .active {
+			  fill: orange;
+			}
 
-#state-borders {
-  fill: none;
-  stroke: #fff;
-  stroke-width: 1.5px;
-  stroke-linejoin: round;
-  stroke-linecap: round;
-  pointer-events: none;
-}
+			#state-borders {
+			  fill: none;
+			  stroke: #fff;
+			  stroke-width: 1.5px;
+			  stroke-linejoin: round;
+			  stroke-linecap: round;
+			  pointer-events: none;
+			}
 
-</style>
+			</style>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -627,19 +620,19 @@ d3.timer(function() {
       <div class="row featurette">
         <div class="col-md-4">
             <script>
-var map;
-function initialize() {
-  var mapOptions = {
-    zoom: 8,
-    center: new google.maps.LatLng(-34.397, 150.644)
-  };
-  map = new google.maps.Map(document.getElementById('map-canvas'),
-      mapOptions);
-}
+			var map;
+			function initialize() {
+			  var mapOptions = {
+				zoom: 8,
+				center: new google.maps.LatLng(-34.397, 150.644)
+			  };
+			  map = new google.maps.Map(document.getElementById('map-canvas'),
+				  mapOptions);
+			}
 
-google.maps.event.addDomListener(window, 'load', initialize);
+			google.maps.event.addDomListener(window, 'load', initialize);
 
-    </script>
+			</script>
 	    <div id="map-canvas"></div>
         </div>
         <div class="col-md-8">

@@ -619,25 +619,14 @@ d3.timer(function() {
 
       <div class="row featurette">
         <div class="col-md-4">
-            <script>
-			var map;
-			function initialize() {
-			  var mapOptions = {
-				zoom: 8,
-				center: new google.maps.LatLng(-34.397, 150.644)
-			  };
-			  map = new google.maps.Map(document.getElementById('map-canvas'),
-				  mapOptions);
-			}
-
-			google.maps.event.addDomListener(window, 'load', initialize);
-
+            <a class="twitter-share-button" href="https://twitter.com/share">Tweet</a>
+			<script type="text/javascript">
+				window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
 			</script>
-	    <div id="map-canvas"></div>
         </div>
         <div class="col-md-8">
-          <h2 class="featurette-heading">Rotten Tomatoes API <span class="text-muted">Searching for a movie</span></h2>
-          <p class="lead">This exploration involves APIs, or more specifically, the Rotten Tomatoes API. Documentation can be found at (<a href="http://developer.rottentomatoes.com/docs" target="_blank">http://developer.rottentomatoes.com/docs</a>. and integrating SoundCloud into my site to listen to music. I explored examples like this one <a href="http://connect.soundcloud.com/examples/basic.html" target="_blank">http://connect.soundcloud.com/examples/basic.html</a>.</p>
+          <h2 class="featurette-heading">Twitter API <span class="text-muted">Incorporating Twitter into my website</span></h2>
+          <p class="lead">This exploration involves APIs, or more specifically, the Twitter API. Documentation can be found at (<a href="http://dev.twitter.com/" target="_blank">http://dev.twitter.com/</a>.</p>
         </div>
       </div>
 	  

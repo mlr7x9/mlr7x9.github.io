@@ -620,23 +620,35 @@ d3.timer(function() {
       <div class="row featurette">
         <div class="col-md-4">
             <meta name="twitter:card" content="summary" />
-<meta       <meta name="twitter:site" content="@MikeRack2" />
-<meta       <meta name="twitter:title" content="CS/IT Advising" />
-<meta       <meta name="twitter:description" content="Check out my capstone project" />
-<meta       <meta name="twitter:image" content="https://pbs.twimg.com/media/B4bCEYOCUAAAbRa.png" />
-<meta       <meta name="twitter:url" content="http://babbage.cs.missouri.edu/~cs4970s14grp4/wordpress/" />
+			<meta name="twitter:site" content="@MikeRack2" />
+			<meta name="twitter:title" content="CS/IT Advising" />
+			<meta name="twitter:description" content="Check out my capstone project" />
+			<meta name="twitter:image" content="https://pbs.twimg.com/media/B4bCEYOCUAAAbRa.png" />
+			<meta name="twitter:url" content="http://babbage.cs.missouri.edu/~cs4970s14grp4/wordpress/" />
 			
 			<a class="twitter-timeline" href="https://twitter.com/MikeRack2" data-widget-id="542335106136801281">Tweets by @MikeRack2</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 			
 			<a class="twitter-share-button" href="https://twitter.com/intent/tweet?screen_name=mikerack2"  data-related="twitterdev" data-size="large" data-count="none">Tweet @MikeRack2</a>
 			<script type="text/javascript">
 				window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
 			</script>
+			
+			<a class="twitter-follow-button" href="https://twitter.com/twitterdev" data-show-count="false" data-lang="en" data-size="large">Follow me @MikeRack2</a>
+			<script type="text/javascript">
+				window.twttr = (function (d, s, id) {
+				  var t, js, fjs = d.getElementsByTagName(s)[0];
+				  if (d.getElementById(id)) return;
+				  js = d.createElement(s); js.id = id;
+				  js.src= "https://platform.twitter.com/widgets.js";
+				  fjs.parentNode.insertBefore(js, fjs);
+				  return window.twttr || (t = { _e: [], ready: function (f) { t._e.push(f) } });
+				}(document, "script", "twitter-wjs"));
+			</script>
         </div>
         <div class="col-md-8">
           <h2 class="featurette-heading">Twitter API <span class="text-muted">Incorporating Twitter into my website</span></h2>
-          <p class="lead">This exploration involves APIs, or more specifically, the Twitter API. Documentation can be found at (<a href="http://dev.twitter.com/" target="_blank">http://dev.twitter.com/</a>.</p>
+          <p class="lead">This exploration involves APIs, or more specifically, the Twitter API. Documentation can be found at (<a href="http://dev.twitter.com/" target="_blank">http://dev.twitter.com/</a>). I've embedded my twitter feed into the site as well as individual tweet buttons.</p>
         </div>
       </div>
 	  
@@ -644,8 +656,8 @@ d3.timer(function() {
 
       <div class="row featurette">
         <div class="col-md-8">
-          <h2 class="featurette-heading">SoundCloud SDK <span class="text-muted">Retrieving an audio file</span></h2>
-          <p class="lead">For this part of my exploration I've decided to look at the SoundCloud SDK (<a href="https://developers.soundcloud.com/docs/api/sdks#javascript" target="_blank">https://developers.soundcloud.com/docs/api/sdks#javascript</a>) and integrating SoundCloud into my site to listen to music. I explored examples like this one <a href="http://connect.soundcloud.com/examples/basic.html" target="_blank">http://connect.soundcloud.com/examples/basic.html</a>. I've also added a streaming button that only pulls a song, not the visuals. An interesting thing about this functionality, is that it will continue to load the song every time the button is pushed. So if the button is pushed 15 times, the song will play over itself 15 times.</p>
+          <h2 class="featurette-heading">Google Analytics <span class="text-muted">Analyze This</span></h2>
+          <p class="lead">For this part of my exploration I've decided to look into Google Analytics (<a href="https://developers.soundcloud.com/docs/api/sdks#javascript" target="_blank">https://developers.soundcloud.com/docs/api/sdks#javascript</a>) and integrating SoundCloud into my site to listen to music. I explored examples like this one <a href="http://connect.soundcloud.com/examples/basic.html" target="_blank">http://connect.soundcloud.com/examples/basic.html</a>. I've also added a streaming button that only pulls a song, not the visuals. An interesting thing about this functionality, is that it will continue to load the song every time the button is pushed. So if the button is pushed 15 times, the song will play over itself 15 times.</p>
         </div>
 		<div class="col-md-4">
             <input type="button" id="loadTracks" value="Get trending track" />
